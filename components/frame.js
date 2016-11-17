@@ -4,18 +4,18 @@ import { style } from 'next/css'
 
 export default ({ id, url }) => (
   <div className={style(styles.photo)}>
-    <div className={style(styles.image)}>
-      <img src={url} alt={id} />
+    <div className={style(styles.main)}>
+      <img src={url} alt={id} className={style(styles.image)} />
     </div>
 
-    <div className={style(styles.sidebar)}>
+    <aside className={style(styles.sidebar)}>
       <ul className={style(styles.sidebarList)}>
         <li>
           <Link href='/profile?id=nkzawa'>@nkzawa</Link>
           - Great photo!
         </li>
       </ul>
-    </div>
+    </aside>
   </div>
 )
 
@@ -27,7 +27,7 @@ const styles = {
     display: 'inline-block'
   },
 
-  image: {
+  main: {
     float: 'left',
     width: '600px',
     height: '500px',
@@ -37,6 +37,12 @@ const styles = {
     verticalAlign: 'middle',
     lineHeight: '500px',
     fontSize: '40px'
+  },
+
+  image: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain'
   },
 
   sidebar: {

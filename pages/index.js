@@ -60,7 +60,7 @@ export default class extends React.Component {
                 className={style(styles.photoLink)}
                 href={'/photo?id=' + photo.id}
                 onClick={(e) => this.showPhoto(e, photo)}>
-                <img src={photo.url} alt={photo.id} />
+                <img src={photo.url} alt={photo.id} className={style(styles.thumb)}/>
               </a>
             </div>
           ))
@@ -94,5 +94,11 @@ const styles = {
     ':hover': {
       borderColor: 'blue'
     }
-  }
+  },
+
+  thumb: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover'
+  },
 }
