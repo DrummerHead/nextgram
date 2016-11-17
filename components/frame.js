@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { style } from 'next/css'
 
 export default ({ id, url }) => (
-  <div className={style(styles.photo)}>
+  <div className={style(styles.frame)}>
     <div className={style(styles.main)}>
       <img src={url} alt={id} className={style(styles.image)} />
     </div>
@@ -20,23 +20,18 @@ export default ({ id, url }) => (
 )
 
 const styles = {
-  photo: {
-    width: '800px',
-    overflow: 'hidden',
-    height: '500px',
-    display: 'inline-block'
+  frame: {
+    display: 'flex',
+    flexFlow: 'row nowrap',
+    width: '85vw',
+    height: '80vh',
+    margin: 'auto',
   },
 
   main: {
-    float: 'left',
-    width: '600px',
-    height: '500px',
+    flex: '0 1 75%',
     background: '#333',
     color: '#fff',
-    textAlign: 'center',
-    verticalAlign: 'middle',
-    lineHeight: '500px',
-    fontSize: '40px'
   },
 
   image: {
@@ -46,20 +41,17 @@ const styles = {
   },
 
   sidebar: {
-    float: 'right',
+    flex: '1 0 25%',
     background: '#fff',
-    width: '200px',
-    height: '500px',
-    textAlign: 'left',
     boxSizing: 'border-box',
     padding: '20px',
     fontFamily: 'Monaco',
-    fontSize: '11px'
+    fontSize: '.8em',
   },
 
   sidebarList: {
     listStyleType: 'none',
     margin: 0,
-    padding: 0
+    padding: 0,
   }
 }

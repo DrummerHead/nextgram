@@ -26,18 +26,16 @@ export default class extends React.Component {
 const styles = {
   shim: {
     position: 'fixed',
-    background: 'rgba(0,0,0,.65)',
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
-    margin: 'auto'
+    display: 'flex',
+    flexFlow: 'row nowrap',
+    background: 'rgba(0,0,0,.65)',
   },
 
   photo: {
-    position: 'absolute',
-    top: '50%',
-    width: '100%',
-    marginTop: '-250px'
+    margin: 'auto',
   }
 }
