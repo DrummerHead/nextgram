@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 import { style } from 'next/css'
 
-export default ({ id }) => (
+export default ({ id, url }) => (
   <div className={style(styles.photo)}>
     <div className={style(styles.image)}>
-      {id}
+      <img src={url} alt={id} />
     </div>
 
     <div className={style(styles.sidebar)}>

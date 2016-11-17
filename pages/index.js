@@ -1,12 +1,15 @@
 import React from 'react'
 import Modal from '../components/modal'
+import getPhotos from '../mock/photos.js'
 import { style } from 'next/css'
+
+const photosMockData = getPhotos();
 
 export default class extends React.Component {
   static getInitialProps () {
     return {
       // dummy data
-      photos: new Array(15).fill(0).map((v, k) => k + 1)
+      photos: photosMockData
     }
   }
 
@@ -34,9 +37,9 @@ export default class extends React.Component {
     this.props.url.back()
   }
 
-  showPhoto (e, id) {
+  showPhoto (e, photo) {
     e.preventDefault()
-    this.props.url.push('/photo?id=' + id)
+    this.props.url.push(`/photo?id=${photo.id}&url=${encodeURIComponent(photo.url)}`)
   }
 
   render () {
@@ -46,17 +49,18 @@ export default class extends React.Component {
           this.props.url.query.id &&
             <Modal
               id={this.props.url.query.id}
+              url={this.props.url.query.url}
               onDismiss={() => this.dismissModal()}
             />
         }
         {
-          this.props.photos.map((id) => (
-            <div key={id} className={style(styles.photo)}>
+          this.props.photos.map((photo) => (
+            <div key={photo.id} className={style(styles.photo)}>
               <a
                 className={style(styles.photoLink)}
-                href={'/photo?id=' + id}
-                onClick={(e) => this.showPhoto(e, id)}>
-                {id}
+                href={'/photo?id=' + photo.id}
+                onClick={(e) => this.showPhoto(e, photo)}>
+                <img src={photo.url} alt={photo.id} />
               </a>
             </div>
           ))

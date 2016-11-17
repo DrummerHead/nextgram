@@ -16,7 +16,7 @@ export default class extends React.Component {
     return (
       <div ref={el => (this._shim = el)} className={style(styles.shim)} onClick={(e) => this.dismiss(e)}>
         <div ref={el => (this._photoWrap = el)} className={style(styles.photo)}>
-          <Photo id={this.props.id} />
+          <Photo id={this.props.id} url={this.props.url} />
         </div>
       </div>
     )

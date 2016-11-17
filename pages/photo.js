@@ -2,10 +2,10 @@ import React from 'react'
 import Photo from '../components/frame'
 import { style } from 'next/css'
 
-export default ({ url: { query: { id } } }) => (
+export default ({ url: { query: { id, url } } }) => (
   <div className={style(styles.permalink)}>
     <div className={style(styles.wrap)}>
-      <Photo id={id} />
+      <Photo id={id} url={url} />
     </div>
   </div>
 )
