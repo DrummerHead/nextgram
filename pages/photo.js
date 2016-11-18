@@ -18,7 +18,7 @@ const styles = {
     display: 'flex',
     height: 'calc(100vh - 3.9rem)',
     backgroundColor: '#ddd',
-    overflow: 'hidden',
+    overflow: 'hidden'
   }
 }
 

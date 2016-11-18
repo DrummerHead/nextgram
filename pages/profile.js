@@ -17,7 +17,7 @@ export default ({ url: { query: { id } } }) => (
 const styles = {
   heading: {
     font: '15px Monaco',
-    margin: '1.9em 1.7em',
+    margin: '1.9em 1.7em'
   },
 
   username: {

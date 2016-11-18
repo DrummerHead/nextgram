@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import { style, select } from 'next/css'
+import { style } from 'next/css'
 
 // We should have a way to add styles to Link components like:
 // https://github.com/threepointone/glamor/blob/master/docs/howto.md#child-selectors
@@ -27,6 +27,6 @@ const styles = {
     height: '3.9rem',
     backgroundColor: '#000',
     color: '#fff',
-    padding: '.75rem 1.5rem',
+    padding: '.75rem 1.5rem'
   }
 }

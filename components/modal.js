@@ -32,12 +32,12 @@ const styles = {
     bottom: 0,
     display: 'flex',
     flexFlow: 'row nowrap',
-    background: 'rgba(0,0,0,.65)',
+    background: 'rgba(0,0,0,.65)'
   },
 
   photo: {
     margin: 'auto',
     width: '85vw',
-    height: '80vh',
+    height: '80vh'
   }
 }

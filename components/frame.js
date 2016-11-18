@@ -25,13 +25,13 @@ const styles = {
     flexFlow: 'row nowrap',
     width: '100%',
     height: '100%',
-    margin: 'auto',
+    margin: 'auto'
   },
 
   main: {
     flex: '0 1 75%',
     background: '#333',
-    color: '#fff',
+    color: '#fff'
   },
 
   image: {
@@ -46,12 +46,12 @@ const styles = {
     boxSizing: 'border-box',
     padding: '20px',
     fontFamily: 'Monaco',
-    fontSize: '.8em',
+    fontSize: '.8em'
   },
 
   sidebarList: {
     listStyleType: 'none',
     margin: 0,
-    padding: 0,
+    padding: 0
   }
 }

@@ -4,7 +4,7 @@ import Modal from '../components/modal'
 import getPhotos from '../mock/photos.js'
 import { style } from 'next/css'
 
-const photosMockData = getPhotos();
+const photosMockData = getPhotos()
 
 export default class extends React.Component {
   static getInitialProps () {
@@ -65,7 +65,7 @@ export default class extends React.Component {
                   className={style(styles.photoLink)}
                   href={'/photo?id=' + photo.id}
                   onClick={(e) => this.showPhoto(e, photo)}>
-                  <img src={photo.url} alt={photo.id} className={style(styles.thumb)}/>
+                  <img src={photo.url} alt={photo.id} className={style(styles.thumb)} />
                 </a>
               </div>
             ))
@@ -106,5 +106,5 @@ const styles = {
     width: '100%',
     height: '100%',
     objectFit: 'cover'
-  },
+  }
 }
