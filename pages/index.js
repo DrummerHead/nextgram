@@ -1,4 +1,5 @@
 import React from 'react'
+import HeadPack from '../components/head-pack'
 import Modal from '../components/modal'
 import getPhotos from '../mock/photos.js'
 import { style } from 'next/css'
@@ -44,27 +45,32 @@ export default class extends React.Component {
 
   render () {
     return (
-      <div className={style(styles.list)}>
-        {
-          this.props.url.query.id &&
-            <Modal
-              id={this.props.url.query.id}
-              url={this.props.url.query.url}
-              onDismiss={() => this.dismissModal()}
-            />
-        }
-        {
-          this.props.photos.map((photo) => (
-            <div key={photo.id} className={style(styles.photo)}>
-              <a
-                className={style(styles.photoLink)}
-                href={'/photo?id=' + photo.id}
-                onClick={(e) => this.showPhoto(e, photo)}>
-                <img src={photo.url} alt={photo.id} className={style(styles.thumb)}/>
-              </a>
-            </div>
-          ))
-        }
+      <div>
+
+        <HeadPack />
+
+        <div className={style(styles.list)}>
+          {
+            this.props.url.query.id &&
+              <Modal
+                id={this.props.url.query.id}
+                url={this.props.url.query.url}
+                onDismiss={() => this.dismissModal()}
+              />
+          }
+          {
+            this.props.photos.map((photo) => (
+              <div key={photo.id} className={style(styles.photo)}>
+                <a
+                  className={style(styles.photoLink)}
+                  href={'/photo?id=' + photo.id}
+                  onClick={(e) => this.showPhoto(e, photo)}>
+                  <img src={photo.url} alt={photo.id} className={style(styles.thumb)}/>
+                </a>
+              </div>
+            ))
+          }
+        </div>
       </div>
     )
   }

@@ -23,8 +23,8 @@ const styles = {
   frame: {
     display: 'flex',
     flexFlow: 'row nowrap',
-    width: '85vw',
-    height: '80vh',
+    width: '100%',
+    height: '100%',
     margin: 'auto',
   },
 

@@ -37,5 +37,7 @@ const styles = {
 
   photo: {
     margin: 'auto',
+    width: '85vw',
+    height: '80vh',
   }
 }
